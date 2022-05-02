@@ -155,6 +155,6 @@ int main() {
     id_numx = save_idfile();
     print_last(row_num, fp, id_numx); //fprintf4
     fclose(fp);
-    frecord(sell_numpluse[0], id_numx), row_num);
+    frecord(sell_numpluse[0], id_numx, row_num);
     return 0;
 }
