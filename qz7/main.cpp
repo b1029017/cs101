@@ -4,7 +4,6 @@
 using namespace std;
 
 class myString{
-    
 };
 
 class ReadClass{
@@ -32,18 +31,15 @@ class ReadClass{
                             outp+=pt+"\n";
                             count++;
                         }
-                            
                     }
                 }
             }
             cout<<count<<" class in "<<fn<<endl<<outp;
-            
         }
 };
 int main()
 {
     ReadClass rfile;
     rfile.showClass();
-
     return 0;
 }
