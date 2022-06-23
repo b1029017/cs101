@@ -36,9 +36,10 @@ class MMmanger{
             if(!flag){
                 cout << " <- Out of space : demand " << size;
             }
+            if(get_MMCapacity() == 0)cout << " <- No space";
             cout << endl;
         }
-        int* calloc_MM(int size){
+        int* alloc_MM(int size){
             int index,av_size = 0;
             for(index = 0; index < num_of_space; index++){
                 (!calloced_p[index])?(av_size++):(av_size = 0);
@@ -67,14 +68,15 @@ class MMmanger{
         }     
 };
 
+
 int main(){
     MMmanger mmer(10);
-    int* p1 = mmer.calloc_MM(1);
-    int* p2 = mmer.calloc_MM(2);
-    int* p3 = mmer.calloc_MM(3);
-    int* p4 = mmer.calloc_MM(4);
+    int* p1 = mmer.alloc_MM(1);
+    int* p2 = mmer.alloc_MM(2);
+    int* p3 = mmer.alloc_MM(3);
+    int* p4 = mmer.alloc_MM(4);
     mmer.free_MM(p1);
     mmer.free_MM(p4);
-    int* p5 = mmer.calloc_MM(6);
+    int* p5 = mmer.alloc_MM(6);
     return 0;
 }
