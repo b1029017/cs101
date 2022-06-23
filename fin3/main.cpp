@@ -35,7 +35,6 @@ class myArray{
         float recAve(int n){
             return recSum(n)/(float)n;
         }
-    
 };
 
 int main(){
@@ -46,6 +45,5 @@ int main(){
     cout << "The max is: " << A.recMax(size) << endl; 
     cout << "The sum is: " << A.recSum(size) << endl; 
     cout << "The avr is: " << A.recAve(size) << endl; 
-    
     return 0;
 }
